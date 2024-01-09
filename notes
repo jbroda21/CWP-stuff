@@ -1,0 +1,43 @@
+Set card to monitor:
+    sudo airmon-ng check kill
+    sudo ip
+    sudo link set wlan0 down
+    sudo iw dev wlan0 set type monitor
+    sudo ip link set wlan0 up
+
+airodump-ng <arg> <interface>
+    -w <filename>
+    --bssid <bssid>
+    --channel <#>
+    --band <abg>
+    --gpsd (gps data) (***ALWAYS HAVE A GPS!!!***)
+    interface (what interface you are using)
+    -M (optional) (displays OUI in plain text)
+    -a (only associated clients)
+    exclusively use --channel or --band
+
+aireplay-ng
+    sudo aireplay-ng -3 -b <bssid> -h <source MAC> <interface>
+        -3 (arp replay attack)
+        -b <bssid>
+        -h <source MAC>
+        <interface>
+    sudo aireplay-ng -0 <#> -a <bssid> -c <client MAC> <interface>
+        -0 (deauth attack)
+        -a <bssid>
+        -c <client MAC>
+        <interface>
+
+aircrack-ng
+    WEP - Brute force
+        sudo aircrack-ng <capture file>
+    WPA/WPA2 - Dictionary
+        sudo aircrack-ng -w <dict file> <capture file>
+        -w <dictionary file>
+
+sudo airodump-ng --band <abg> <interface>
+sudo airodump-ng --bssid <bssid> --channel <#> -w <filename> <interface>
+sudo aireplay-ng -0 <#> -b <bssid> -c <client MAC> <interface>
+sudo aircrack-ng -w <dict file> <capture file>
+
+wlan.fc.type_subtype==8
