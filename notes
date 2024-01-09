@@ -40,4 +40,24 @@ sudo airodump-ng --bssid <bssid> --channel <#> -w <filename> <interface>
 sudo aireplay-ng -0 <#> -b <bssid> -c <client MAC> <interface>
 sudo aircrack-ng -w <dict file> <capture file>
 
-wlan.fc.type_subtype==8
+wlan.fc.type_subtype==8 (beacon frame filter)
+ERP = 802.11g
+VHT = 802.11ac/ax
+
+bootp/dhcp (shows dhcp packets, hostname and possible OS)
+nbns (nbns packets, hostname)
+browser (browser packets, hostname and OS)
+llmnr (llmnr packets, hostname)
+smb (smb packets, hostname)
+
+http.request.method==GET
+
+NT 5.0 - Win 2000
+NT 5.1 - WIN XP
+NT 5.2 - Win 2003
+NT 6.0 - Win Vista
+NT 6.1 - Win 7
+NT 6.2 - Win 8
+NT 6.3 - Win 8.1 or 2012
+NT 10.0 - Win 10/11 or 2016
+
